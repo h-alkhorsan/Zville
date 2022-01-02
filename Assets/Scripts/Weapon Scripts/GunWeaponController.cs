@@ -24,18 +24,26 @@ public class GunWeaponController : WeaponController
         switch(weaponName)
         {
             case NameWeapon.HANDGUN:
+                SoundManagerScript.PlaySound("handgun");
+                fx_Shot.Play();
                 break;
 
             case NameWeapon.AK:
+                SoundManagerScript.PlaySound("ak47");
+                fx_Shot.Play();
                 break;
 
             case NameWeapon.FLAMETHROWER:
+                SoundManagerScript.PlaySound("flamethrower");
+                fx_Shot.Play();
                 break;
 
        }
 
         
     }
+
+
 
 
     IEnumerator WaitForShootEffect()

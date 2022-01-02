@@ -24,6 +24,8 @@ public class WeaponController : MonoBehaviour
     public int bulletMax;
 
 
+
+
     private void Awake()
     {
         playerAnim = GetComponentInParent<PlayerAnimations>();
@@ -42,6 +44,7 @@ public class WeaponController : MonoBehaviour
                 // Shoot animation
                 playerAnim.AttackAnimation();
 
+
                 lastShot = Time.time;
                 currentBullet--;
 
@@ -49,8 +52,8 @@ public class WeaponController : MonoBehaviour
 
             else
             {
-
                 // Play no ammo sound
+                SoundManagerScript.PlaySound("empty");
             }
         }
     }
