@@ -10,10 +10,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
-
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        zombieAnimation = GetComponent<ZombieAnimation>();
-        
+        zombieAnimation = GetComponent<ZombieAnimation>();        
     }
 
     // Update is called once per frame
