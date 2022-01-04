@@ -6,6 +6,7 @@ public class ZombieAnimation : MonoBehaviour
 {
     private Animator anim;
     public ZombieCollider zombieCollider;
+    private EnemyBehaviour zombie;
 
 
 
@@ -13,6 +14,7 @@ public class ZombieAnimation : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
+        zombie = GetComponent<EnemyBehaviour>();        
     }
 
     public void ZombieRunAnimation(bool run)
@@ -36,6 +38,10 @@ public class ZombieAnimation : MonoBehaviour
     public void Dead()
     {
         anim.SetTrigger(TagManager.DEAD_PARAMETER);
+    }
+
+    public void Rising() {
+        zombie.Rising();
     }
 
     // Update is called once per frame

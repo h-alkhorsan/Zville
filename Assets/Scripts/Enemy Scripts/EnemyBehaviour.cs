@@ -6,6 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public float speed;
     private Transform target;
+    private bool risen = false;
     private ZombieAnimation zombieAnimation;
 
     void Start()
@@ -17,15 +18,15 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float h = transform.position.x - target.position.x;
+        if(risen){
 
-        if(Mathf.Abs(h) > 1) {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        } else {
-            zombieAnimation.AttackAnimation();
+            if(Mathf.Abs(h) > 1) {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            } else {
+                zombieAnimation.AttackAnimation();
+            } 
         }
-
 
         Vector3 tempScale = transform.localScale;
         
@@ -43,5 +44,8 @@ public class EnemyBehaviour : MonoBehaviour
         transform.localScale = tempScale;
 
 
+    }
+    public void Rising(){
+        risen = true;
     }
 }
