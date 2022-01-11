@@ -7,6 +7,7 @@ public class ZombieAnimation : MonoBehaviour
     private Animator anim;
     public ZombieCollider zombieCollider;
     private EnemyBehaviour zombie;
+    private bool hit = false;
 
 
 
@@ -32,12 +33,23 @@ public class ZombieAnimation : MonoBehaviour
     }
     public void Hurt()
     {
+        Debug.Log("reached");
+        hit = true;
         anim.SetTrigger(TagManager.GET_HURT_PARAMETER);
     }
 
     public void Dead()
     {
         anim.SetTrigger(TagManager.DEAD_PARAMETER);
+    }
+
+    public bool isHit(){
+        return hit;
+    }
+
+    public void finishHit(){
+        Debug.Log("FinishedHit");
+        hit = false;
     }
 
     public void Rising() {

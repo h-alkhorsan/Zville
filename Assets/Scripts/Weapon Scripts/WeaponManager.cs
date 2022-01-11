@@ -12,6 +12,7 @@ public class WeaponManager : MonoBehaviour
     private int currentWeaponIndex;
     private TypeControlAttack currentTypeControl;
     private PlayerArmController[] armController;
+    private BulletCollider bulletCollider;
     private PlayerAnimations playerAnim;
     private bool isShooting;
 
@@ -26,6 +27,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         armController = GetComponentsInChildren<PlayerArmController>();
+        bulletCollider = GetComponentInChildren<BulletCollider>();
 
         ChangeWeapon(weaponsUnlocked[1]);
         
@@ -88,13 +90,16 @@ public class WeaponManager : MonoBehaviour
         if (currentTypeControl == TypeControlAttack.Hold)
         {
             currentWeapon.CallAttack();
+            bulletCollider.Shooting();
         }
 
         else if (currentTypeControl == TypeControlAttack.Click)
         {
             if (!isShooting)
             {
+
                 currentWeapon.CallAttack();
+                bulletCollider.Shooting();
                 isShooting = true;
             }
         }

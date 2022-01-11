@@ -41,8 +41,11 @@ public class WeaponController : MonoBehaviour
             {
                 ProcessAttack();
 
+                Debug.Log("Attacking");
+
                 // Shoot animation
                 playerAnim.AttackAnimation();
+
 
 
                 lastShot = Time.time;

@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    float t;
+    Vector3 startPosition;
+    Vector3 knockBack;
     public float speed;
     private Transform target;
     private bool risen = false;
     private ZombieAnimation zombieAnimation;
+    float timeToReachTarget;
 
     void Start()
     {
+        startPosition = knockBack = transform.position;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         zombieAnimation = GetComponent<ZombieAnimation>();        
     }
@@ -19,7 +24,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
         float h = transform.position.x - target.position.x;
-        if(risen){
+        if(risen && !zombieAnimation.isHit()){
 
             if(Mathf.Abs(h) > 1) {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -27,6 +32,16 @@ public class EnemyBehaviour : MonoBehaviour
                 zombieAnimation.AttackAnimation();
             } 
         }
+
+        if(zombieAnimation.isHit()){
+            // t += Time.deltaTime/timeToReachTarget;
+            // transform.position = Vector3.Lerp(startPosition, knockBack, t);
+            // if(t == 1){
+            //     zombieAnimation.setHit(false);
+            // } 
+            transform.position = Vector2.MoveTowards(transform.position, target.position, -1 * speed * Time.deltaTime);   
+        }
+
 
         Vector3 tempScale = transform.localScale;
         
@@ -47,5 +62,12 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public void Rising(){
         risen = true;
+    }
+    public void SetDestination(Vector3 destination, float time)
+    {
+        t = 0;
+        startPosition = transform.position;
+        timeToReachTarget = time;
+        knockBack = destination; 
     }
 }

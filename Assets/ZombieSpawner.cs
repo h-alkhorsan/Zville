@@ -30,7 +30,7 @@ public class ZombieSpawner : MonoBehaviour
         
         //Do the action after the delay time has finished.
         var spawnDisplacement = spawnSide*Random.Range(rangeClose,rangeFar);
-        Debug.Log(spawnDisplacement);
+        // Debug.Log(spawnDisplacement);
         Instantiate(zombie, target.position + new Vector3(spawnDisplacement,-0.5f,0), Quaternion.identity);
         var newHole = Instantiate(hole, target.position + new Vector3(spawnDisplacement,0,0), Quaternion.identity);
         Destroy(newHole,2);
