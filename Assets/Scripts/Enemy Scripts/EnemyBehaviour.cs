@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    float t;
+    //float t;  *Hussain - I commented this out to get rid of the annoying warning message because its never used, uncomment it if you need it.
     Vector3 startPosition;
     Vector3 knockBack;
     public float speed;
@@ -65,7 +65,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public void SetDestination(Vector3 destination, float time)
     {
-        t = 0;
+        //t = 0;  See my comment above
         startPosition = transform.position;
         timeToReachTarget = time;
         knockBack = destination; 

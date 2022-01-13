@@ -8,7 +8,7 @@ public class StayInside : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5f, 7f), 
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2, 260), 
             transform.position.y, 
             transform.position.z);
     }
