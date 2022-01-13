@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum NameWeapon
 {
@@ -26,7 +27,7 @@ public class WeaponController : MonoBehaviour
 
 
 
-    private void Awake()
+    public void Awake()
     {
         playerAnim = GetComponentInParent<PlayerAnimations>();
         currentBullet = bulletMax;
@@ -66,10 +67,8 @@ public class WeaponController : MonoBehaviour
         
     }
 
-    void Start()
-    {
-        
-    }
+
+
 
     void Update()
     {

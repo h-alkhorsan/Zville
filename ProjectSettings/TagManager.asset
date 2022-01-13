@@ -9,6 +9,7 @@ TagManager:
   - PlayerHealth
   - Weapon
   - Entry
+  - Text
   layers:
   - Default
   - TransparentFX

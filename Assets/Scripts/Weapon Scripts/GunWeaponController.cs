@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunWeaponController : WeaponController 
 {
@@ -13,10 +14,18 @@ public class GunWeaponController : WeaponController
     private WaitForSeconds waitTime = new WaitForSeconds(0.02f);
     private WaitForSeconds fireColliderWait = new WaitForSeconds(0.02f);
 
+
     // Start is called before the first frame update
     void Start()
-    {   
-        
+    {
+       
+/*       ammoText = GameObject.FindGameObjectsWithTag("Text");
+       foreach(GameObject ammo in ammoText) 
+       {
+            ammo.text = currentBullet;
+            
+       }*/
+       
     }
 
     public override void ProcessAttack()

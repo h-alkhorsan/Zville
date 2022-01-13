@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Linq;
 
-public class EnterHouse : MonoBehaviour
+public class HouseEntryScript : MonoBehaviour
 {
 
     public GameObject player;
@@ -35,7 +34,8 @@ public class EnterHouse : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.W))
                 {
-                    SwitchScene();
+                    //SwitchScene();
+                    Debug.Log("Switch Scene");
                 }
             }
         }
