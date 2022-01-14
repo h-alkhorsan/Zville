@@ -74,6 +74,7 @@ public class BulletCollider : MonoBehaviour
             m_Collider.size = new Vector2(10f,1f);
         }
         if(weaponIDX == 3){
+            m_Collider.offset = new Vector2(-3.16f,0f);
             m_Collider.size = new Vector2(5f,1f);
         }
         isShoot = true;

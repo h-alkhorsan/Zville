@@ -6229,9 +6229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 683931495625104562, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
   hole: {fileID: 901558419186183647, guid: edd60f0d34fe8014da0827aa8253b5bf, type: 3}
-  spawnRate: 3.1
-  rangeClose: 5.1
-  rangeFar: 10.1
+  spawnRate: 3
+  rangeClose: 5
+  rangeFar: 10
   level: 0
 --- !u!4 &1610840557
 Transform:
@@ -8570,6 +8570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 588462383315951546, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 678317806180662404, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -8622,5 +8626,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 695227843755359070, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118375445793739410, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 138038774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ff15262bc22374ca75576636c9778b, type: 3}

@@ -27,7 +27,9 @@ public class ZombieCollider : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider){
         if(isBite == true){
             m_Collider.enabled = false;
+            var playerHealthBar = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<PlayerHealth>(); 
             target.Hurt();
+            playerHealthBar.TakeDamage(10);
             isBite = false;
         }
     
