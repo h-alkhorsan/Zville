@@ -2145,6 +2145,10 @@ PrefabInstance:
       value: Bob
       objectReference: {fileID: 0}
     - target: {fileID: 1940654426450688, guid: c528fa666a95d054eb2e180c0ef2c841, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940654426450688, guid: c528fa666a95d054eb2e180c0ef2c841, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}

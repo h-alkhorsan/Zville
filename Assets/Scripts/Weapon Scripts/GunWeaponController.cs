@@ -20,12 +20,6 @@ public class GunWeaponController : WeaponController
     void Start()
     {
        
-/*       ammoText = GameObject.FindGameObjectsWithTag("Text");
-       foreach(GameObject ammo in ammoText) 
-       {
-            ammo.text = currentBullet;
-            
-       }*/
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
