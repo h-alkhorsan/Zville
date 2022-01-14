@@ -543,7 +543,6 @@ Transform:
   m_Father: {fileID: 1911434430}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &122462520
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,8 +676,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122462520}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &134378255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +997,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198534559643142170, guid: 4e1badf5c7bd740bdb8f828d99509eb3, type: 3}
   m_PrefabInstance: {fileID: 1311733523}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &211701080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,8 +1130,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211701080}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &213416300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1502831322217258, guid: c528fa666a95d054eb2e180c0ef2c841, type: 3}
@@ -1627,7 +1621,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315487623}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &352780678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,8 +1889,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364933043}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &388859590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,7 +3058,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736107918}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &767449286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,8 +3191,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767449286}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &789959611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,7 +4752,6 @@ Transform:
   m_Father: {fileID: 138038778}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1328713030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,8 +4831,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328713030}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &1337126268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,7 +5721,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1 &1544603098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6027,8 +6011,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570365051}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &1582672015
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,7 +6248,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1616520059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6342,8 +6323,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616520059}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &1624989817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,7 +6437,6 @@ Transform:
   m_Father: {fileID: 1911434430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1706667946
 GameObject:
   m_ObjectHideFlags: 0
@@ -6649,8 +6627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730250613}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1001 &1730268133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8057,7 +8033,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955387be3f9aacd45b1919e5a42adcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
 --- !u!1 &2064010487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8327,8 +8302,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073797110}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 7e96f2f17e09cdaa670596465c95d03f3de40733
 --- !u!1 &2102273572
 GameObject:
   m_ObjectHideFlags: 0
