@@ -27,6 +27,8 @@ public class WeaponManager : MonoBehaviour
         return currentWeaponIndex;
     }
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,11 +105,16 @@ public class WeaponManager : MonoBehaviour
         {
             if (!isShooting)
             {
-                currentWeapon.CallAttack();
-                if(currentWeapon.currentBullet != 0){
-                    bulletCollider.Shooting(currentWeaponIndex);
+                if(currentWeaponIndex != 0){
+                    currentWeapon.CallAttack();
+                    if(currentWeapon.currentBullet != 0){
+                        bulletCollider.Shooting(currentWeaponIndex);
+                    }
+                    isShooting = true;
+                } else {
+                    currentWeapon.callBatAttack();
                 }
-                isShooting = true;
+
             }
         }
         
@@ -116,5 +123,9 @@ public class WeaponManager : MonoBehaviour
     public void ResetAttack()
     {
         isShooting = false;
+    }
+
+    public void CallMeleeAttack(){
+        bulletCollider.Shooting(currentWeaponIndex);
     }
 }
