@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
     private Animator anim;
+    private bool finishedDying = false;
 
 
     // Start is called before the first frame update
@@ -37,6 +38,14 @@ public class PlayerAnimations : MonoBehaviour
     public void Dead()
     {
         anim.SetTrigger(TagManager.DEAD_PARAMETER);
+    }
+
+    public bool isFinishedDying(){
+        return finishedDying;
+    }
+
+    public void isDead(){
+        finishedDying = true;
     }
 
     // Update is called once per frame
