@@ -62,6 +62,19 @@ public class WeaponController : MonoBehaviour
         }
     }
 
+    public void callBatAttack(){
+        if (Time.time > lastShot + defaultConfig.fireRate)
+        {
+                ProcessAttack();
+
+                // Shoot animation
+                playerAnim.AttackAnimation();
+
+                lastShot = Time.time;
+        }
+
+    }
+
     public virtual void ProcessAttack()
     {
         

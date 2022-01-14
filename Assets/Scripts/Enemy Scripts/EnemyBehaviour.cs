@@ -51,7 +51,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         if(zombieAnimation.isHit() && currentWpn.getCurrentWeaponIndex() == 0){
-            transform.position = Vector2.MoveTowards(transform.position, target.position, -1 * speed * Time.deltaTime);   
+            transform.position = Vector2.MoveTowards(transform.position, target.position, -2 * speed * Time.deltaTime);   
         }
 
         Vector3 tempScale = transform.localScale;
