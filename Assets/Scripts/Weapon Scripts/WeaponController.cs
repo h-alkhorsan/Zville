@@ -40,13 +40,18 @@ public class WeaponController : MonoBehaviour
         {
             if (currentBullet > 0)
             {
+                ProcessAttack();
+
                 //Debug.Log("Attacking");
 
                 // Shoot animation
                 playerAnim.AttackAnimation();
 
+
+
                 lastShot = Time.time;
                 currentBullet--;
+
             }
 
             else
@@ -60,6 +65,8 @@ public class WeaponController : MonoBehaviour
     public void callBatAttack(){
         if (Time.time > lastShot + defaultConfig.fireRate)
         {
+                ProcessAttack();
+
                 // Shoot animation
                 playerAnim.AttackAnimation();
 
