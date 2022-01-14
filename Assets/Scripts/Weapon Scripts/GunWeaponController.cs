@@ -9,7 +9,6 @@ public class GunWeaponController : WeaponController
     private Transform target;
     public GameObject bulletPrefab;
     public ParticleSystem fx_Shot;
-    public GameObject fx_BulletFall;
     public ParticleSystem fx_BulletFall;
 
     private Collider2D fireCollider;
@@ -27,8 +26,7 @@ public class GunWeaponController : WeaponController
             ammo.text = currentBullet;
             
        }*/
-       
-    {   
+
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
