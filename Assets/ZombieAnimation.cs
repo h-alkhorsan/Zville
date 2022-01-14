@@ -31,15 +31,19 @@ public class ZombieAnimation : MonoBehaviour
     public void Bite() {
         zombieCollider.Biting();
     }
+
+    
     public void Hurt()
     {
-        Debug.Log("reached");
         hit = true;
+        zombie.DecreaseHealth();
         anim.SetTrigger(TagManager.GET_HURT_PARAMETER);
     }
 
     public void Dead()
     {
+        var deathType = Random.Range(1,4);
+        anim.SetInteger(TagManager.RANDOM_PARAMETER,deathType);
         anim.SetTrigger(TagManager.DEAD_PARAMETER);
     }
 
@@ -48,7 +52,6 @@ public class ZombieAnimation : MonoBehaviour
     }
 
     public void finishHit(){
-        Debug.Log("FinishedHit");
         hit = false;
     }
 

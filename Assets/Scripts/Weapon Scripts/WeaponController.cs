@@ -42,7 +42,7 @@ public class WeaponController : MonoBehaviour
             {
                 ProcessAttack();
 
-                Debug.Log("Attacking");
+                //Debug.Log("Attacking");
 
                 // Shoot animation
                 playerAnim.AttackAnimation();

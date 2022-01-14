@@ -94,16 +94,19 @@ public class WeaponManager : MonoBehaviour
         if (currentTypeControl == TypeControlAttack.Hold)
         {
             currentWeapon.CallAttack();
-            bulletCollider.Shooting();
+            if(currentWeapon.currentBullet != 0){
+                bulletCollider.Shooting(currentWeaponIndex);
+            }
         }
 
         else if (currentTypeControl == TypeControlAttack.Click)
         {
             if (!isShooting)
             {
-
                 currentWeapon.CallAttack();
-                bulletCollider.Shooting();
+                if(currentWeapon.currentBullet != 0){
+                    bulletCollider.Shooting(currentWeaponIndex);
+                }
                 isShooting = true;
             }
         }
