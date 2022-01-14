@@ -22,7 +22,6 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         if(currentHealth <= 0){
-            Debug.Log("You Died");
 
             var target = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimations>();
             
@@ -32,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
             }
 
             if(target.isFinishedDying()){
-                StartCoroutine(DeathWait());
+                StartCoroutine(DeathWait());    
             }
         }
         // if player get hurt, take damage
