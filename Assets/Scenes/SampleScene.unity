@@ -572,8 +572,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 268797750}
+  m_Children: []
   m_Father: {fileID: 1328713031}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1026,8 +1025,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2000602230}
+  m_Children: []
   m_Father: {fileID: 1328713031}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6216,7 +6214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1610840556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6231,9 +6229,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 683931495625104562, guid: 14ff15262bc22374ca75576636c9778b, type: 3}
   hole: {fileID: 901558419186183647, guid: edd60f0d34fe8014da0827aa8253b5bf, type: 3}
-  spawnRate: 3
-  rangeClose: 5
-  rangeFar: 10
+  spawnRate: 3.1
+  rangeClose: 5.1
+  rangeFar: 10.1
+  level: 0
 --- !u!4 &1610840557
 Transform:
   m_ObjectHideFlags: 0

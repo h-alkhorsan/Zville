@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ZombieSpawner : MonoBehaviour
 {
@@ -9,13 +11,20 @@ public class ZombieSpawner : MonoBehaviour
     public GameObject zombie;
     public GameObject hole;
     public float spawnRate;
-    public int rangeClose;
-    public int rangeFar;
+    public float rangeClose;
+    public float rangeFar;
     private bool spawning = false;
+    public int level;
+    private float spawnRateF = 3f;
+    private float rangeCloseF = 5f;
+    private float rangeFarF = 10f;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        spawnRateF = spawnRate;
+        rangeCloseF = rangeClose;
+        rangeFarF = rangeFar;
     }
 
     void DoDelayAction(float delayTime)
@@ -46,5 +55,33 @@ public class ZombieSpawner : MonoBehaviour
             spawning = true;
             DoDelayAction(spawnRate);
         }
+        var currentPos = target.position.x;
+        var levelSize = 27f;
+
+        for(int i = 0; i < 9; i++){
+            if(currentPos > levelSize*i){
+                level = i;
+            }
+            
+
+        }
+
+        if(level != 0){
+            spawnRate = spawnRateF - (2f/(9f-level));
+            rangeClose = rangeCloseF - (3f/(9f-level));
+            rangeFar = rangeFarF - (4f/(9f-level));
+
+        }   
+
+        if(currentPos > 246f){
+            Debug.Log("Finished Game");
+            SceneManager.LoadScene(0);
+        }
+
+
+
+
+
+
     }
 }
