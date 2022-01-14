@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
 
     private Rigidbody2D playerBody;
-    private float MoveForceX = 30.0f;
+    private float MoveForceX = 3.0f;
 
     private PlayerAnimations playerAnimation;
 
