@@ -17,57 +17,80 @@ public class EnemyBehaviour : MonoBehaviour
     public ParticleSystem fx_Blood;
     private bool dead = false;
     private int lastBullet = -1;
+    private GameObject player;
 
 
     void Start()
     {
         startPosition = knockBack = transform.position;
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        currentWpn = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponManager>();
-
         zombieAnimation = GetComponent<ZombieAnimation>();        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(zombieHealth <= 0 && !dead){
-            dead = true;
-            Debug.Log("Killed");
-            var m_Collider = GetComponent<BoxCollider2D>();
-            m_Collider.enabled = false;
-            zombieAnimation.Dead();
-            Destroy(gameObject,3);
+
+        if(GameObject.FindGameObjectWithTag("Player")){
+            player = GameObject.FindGameObjectWithTag("Player");
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            currentWpn = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponManager>();
+
+            if(zombieHealth <= 0 && !dead){
+                dead = true;
+                Debug.Log("Killed");
+                var m_Collider = GetComponent<BoxCollider2D>();
+                m_Collider.enabled = false;
+                zombieAnimation.Dead();
+                Destroy(gameObject,3);
+            }
+            float h = transform.position.x - target.position.x;
+            if(risen && !zombieAnimation.isHit() && zombieHealth > 0 && player.activeSelf){
+
+                if(Mathf.Abs(h) > 1) {
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                } else {
+                    zombieAnimation.AttackAnimation();
+                } 
+            }
+
+
+
+            if(zombieAnimation.isHit() && currentWpn.getCurrentWeaponIndex() == 0){
+                transform.position = Vector2.MoveTowards(transform.position, target.position, -2 * speed * Time.deltaTime);   
+            }
+
+            Vector3 tempScale = transform.localScale;
+            
+
+            if (h > 0)
+            {
+                tempScale.x = 1f;
+            }
+
+            else if (h < 0)
+            {
+                tempScale.x = -1f;
+            }
+
+            transform.localScale = tempScale;
+        } else {
+            if(risen){
+                var h = Random.Range(-2f, 2f);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector3(transform.position.x*h, transform.position.y, transform.position.z), speed * Time.deltaTime);
+                Vector3 tempScale = transform.localScale;
+                if (h > 0)
+                {
+                    tempScale.x = 1f;
+                }
+
+                else if (h < 0)
+                {
+                    tempScale.x = -1f;
+                }
+
+            }
+
         }
-
-        float h = transform.position.x - target.position.x;
-        if(risen && !zombieAnimation.isHit() && zombieHealth > 0){
-
-            if(Mathf.Abs(h) > 1) {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            } else {
-                zombieAnimation.AttackAnimation();
-            } 
-        }
-
-        if(zombieAnimation.isHit() && currentWpn.getCurrentWeaponIndex() == 0){
-            transform.position = Vector2.MoveTowards(transform.position, target.position, -2 * speed * Time.deltaTime);   
-        }
-
-        Vector3 tempScale = transform.localScale;
-        
-
-        if (h > 0)
-        {
-            tempScale.x = 1f;
-        }
-
-        else if (h < 0)
-        {
-            tempScale.x = -1f;
-        }
-
-        transform.localScale = tempScale;
 
 
     }

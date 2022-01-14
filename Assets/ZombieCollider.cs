@@ -11,7 +11,9 @@ public class ZombieCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimations>();
+        if(GameObject.FindGameObjectWithTag("Player")){
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimations>();
+        }
         m_Collider = GetComponent<Collider2D>();
         m_Collider.enabled = false;
     }

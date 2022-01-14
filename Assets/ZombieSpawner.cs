@@ -49,6 +49,9 @@ public class ZombieSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameObject.FindGameObjectWithTag("Player")){
+
+        
         if(!spawning){
             int[] choices = new int[] {-1, 1};
             spawnSide  = choices[Random.Range(0, choices.Length)];
@@ -76,6 +79,7 @@ public class ZombieSpawner : MonoBehaviour
         if(currentPos > 246f){
             Debug.Log("Finished Game");
             SceneManager.LoadScene(0);
+        }
         }
 
 
