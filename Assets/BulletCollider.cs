@@ -25,18 +25,19 @@ public class BulletCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider){
         if(isShoot == true){
-            Debug.Log("OnStay");
+            //Debug.Log("OnStay");
             zombies = collider.GetComponents<Collider2D>();
             Debug.Log(zombies);
             foreach(Collider2D zombie in zombies){
+                Debug.Log("Reached1");
                 // Debug.Log("Found:" + zombie.gameObject.name);
                 // Debug.Log(zombie.gameObject.tag);
                 if(zombie.gameObject.tag == "Enemy"){
+                    Debug.Log("Reached");
                     var zombieAnim = zombie.GetComponent<ZombieAnimation>();
                     zombieAnim.Hurt();
                 }
             }
-            //target.Hurt();
             m_Collider.enabled = false;
             isShoot = false;
         }
@@ -47,18 +48,18 @@ public class BulletCollider : MonoBehaviour
     {
 
         if(isShoot == true){
-            Debug.Log("OnStay");
+            //Debug.Log("OnStay");
             zombies = collider.GetComponents<Collider2D>();
             Debug.Log(zombies);
             foreach(Collider2D zombie in zombies){
                 // Debug.Log("Found:" + zombie.gameObject.name);
                 // Debug.Log(zombie.gameObject.tag);
                 if(zombie.gameObject.tag == "Enemy"){
+                    Debug.Log("Reached");
                     var zombieAnim = zombie.GetComponent<ZombieAnimation>();
                     zombieAnim.Hurt();
                 }
             }
-            //target.Hurt();
             m_Collider.enabled = false;
             isShoot = false;
         }

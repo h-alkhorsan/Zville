@@ -23,6 +23,10 @@ public class WeaponManager : MonoBehaviour
         currentWeaponIndex = 1;
     }
 
+    public int getCurrentWeaponIndex(){
+        return currentWeaponIndex;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

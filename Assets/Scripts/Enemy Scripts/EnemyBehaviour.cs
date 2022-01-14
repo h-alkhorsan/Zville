@@ -11,12 +11,17 @@ public class EnemyBehaviour : MonoBehaviour
     private Transform target;
     private bool risen = false;
     private ZombieAnimation zombieAnimation;
+    private  WeaponManager currentWpn;
     float timeToReachTarget;
+    public int zombieHealth;
 
     void Start()
     {
+        zombieHealth = 100;
         startPosition = knockBack = transform.position;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        currentWpn = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponManager>();
+
         zombieAnimation = GetComponent<ZombieAnimation>();        
     }
 
@@ -34,12 +39,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         if(zombieAnimation.isHit()){
-            // t += Time.deltaTime/timeToReachTarget;
-            // transform.position = Vector3.Lerp(startPosition, knockBack, t);
-            // if(t == 1){
-            //     zombieAnimation.setHit(false);
-            // } 
-            transform.position = Vector2.MoveTowards(transform.position, target.position, -1 * speed * Time.deltaTime);   
+            Debug.Log(currentWpn.getCurrentWeaponIndex());
+            if(currentWpn.getCurrentWeaponIndex() == 0){
+                transform.position = Vector2.MoveTowards(transform.position, target.position, -1 * speed * Time.deltaTime);   
+            }
+
+
         }
 
 
