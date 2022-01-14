@@ -24,7 +24,7 @@ public class PlayerInputController : MonoBehaviour
             weaponManager.SwitchWeapon();
         }
         
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.Space))
         {
             isHoldAttack = true;
         }
