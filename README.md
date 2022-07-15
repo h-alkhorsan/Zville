@@ -1,4 +1,4 @@
-# Zville #
+# ZombieVille
 
 To play game press play, Press A and D or Left and Right arrow keys for horizontal movement.
 The goal of the game is to reach the helicopter in order to escape Zville. Zombies will spawn to block your way. Press J to shoot and Q to switch weapon.
